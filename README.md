@@ -7,9 +7,12 @@ Node project is in root directory i.e. '\Reservations'
 
 To run Node project, perform following steps.
 
-Step 1 : In command prompt,   move to \Reservations (root directory)
+Step 1 : In command prompt,   move to \Reservations (root directory).
+
 Step 2 : Run command : "npm install". This will ensure all the packages need for this app is installed.
+
 Step 3 : Run command : "npm run dev". This will start the application.
+
 Step 4 : Once the step 3 executes, the message "Database Connected!" and "Server is listen port : 8080" will be logged to the console. Now you can access our Node app using URL : http://localhost:8080
 User will see a static html page which is not pretty.
 
