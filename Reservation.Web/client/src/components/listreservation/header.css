@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    width: 97%;
+    margin-right:3%;
+    border-bottom: 1px solid gray;
+}
+.header h3{
+    display: flex;
+    width: 25%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    cursor: pointer;
+}

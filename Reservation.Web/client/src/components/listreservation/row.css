@@ -1,0 +1,23 @@
+.row {
+    display: flex;
+    width: 97%;
+    margin-right:3%;
+    border-bottom: 1px solid #c0c0c0;
+    cursor: default;
+}
+
+.row span{
+    display: flex;
+    width: 25%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    height: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    cursor: default;
+}
+.row.even{
+    background: #f0f0f0;
+    border-radius: 5px;
+}

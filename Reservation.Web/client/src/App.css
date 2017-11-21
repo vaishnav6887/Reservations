@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  padding: 20px;
+  color: white;
+  text-align: left;
+  padding-left: 30px; 
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.Col-container {
+  display: flex;
+}
+.Col-container .addContainer{
+  flex: 1;
+}
+.Col-container .listContainer{
+  flex: 3;
+  margin-top: 10px;
+}
+.Col-container .listContainer .list-header{
+  padding-top: 10px;
+  text-align: left;
+}
+.empty-message{
+  margin: 20px;
+  color: #303030;
+}
+.search-clear{
+  float: right;
+  margin-right:3%;
+    height: 40px;
+    width: 5%;
+    background-color: #4CAF50;
+    border: 1px solid #c0c0c0;
+    color: #f0f0f0;
+    cursor: pointer;
+}
+.listContainer .filter-container {
+  display: flex;
+}
+.listContainer .filter-container .name-filter {
+  flex: 3;
+}
+.listContainer .filter-container .name-filter {
+  flex: 3;
+}

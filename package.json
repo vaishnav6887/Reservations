@@ -1,0 +1,30 @@
+{
+  "name": "reservations",
+  "version": "1.0.0",
+  "description": "Server side using NodeJS, expressJS and MongoDb to build API",
+  "main": "app.js",
+  "scripts": {
+    "test": "run",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaishnav6887/Reservations.git"
+  },
+  "keywords": [
+    "Reservation"
+  ],
+  "author": "Vaishnav Thakur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vaishnav6887/Reservations/issues"
+  },
+  "homepage": "https://github.com/vaishnav6887/Reservations#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}

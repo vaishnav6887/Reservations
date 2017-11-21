@@ -1,0 +1,37 @@
+.add-reservation{
+    border: 1px solid #c0c0c0;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.add-reservation .input-container{
+    text-align: left;
+}
+.add-reservation .input-container input{
+    height: 25px;
+    width: 88%;
+    margin: 1% 5%;
+    padding: 2px;
+}
+
+.add-reservation .input-container section{
+    width: 45%;
+    margin: 1% 5%;
+}
+
+.add-reservation .input-container button{
+    margin: 5%;
+    height: 40px;
+    width: 90%;
+    background-color: #4CAF50;
+    border: 1px solid #c0c0c0;
+    color: #f0f0f0;
+    cursor: pointer;
+}
+
+.add-reservation .input-container button:active{
+    border: none;
+}

@@ -1,0 +1,52 @@
+.filter-control {
+    display: flex;
+    border: 1px solid #c0c0c0;
+    margin-right: 3%;
+    border-radius: 5px;
+}
+
+.filter-control .filter-byid{
+    flex: 1;
+
+}
+
+.filter-control .name-filter{
+    flex: 3;
+}
+
+.filter-control .filter-byid input, .filter-control .name-filter input{
+    height: 25px;
+    width: 88%;
+    margin: 1% 5%;
+    padding: 2px;
+}
+
+.filter-control .filter-byid button{
+    margin: 5%;
+    height: 40px;
+    width: 90%;
+    background-color: #4CAF50;
+    border: 1px solid #c0c0c0;
+    color: #f0f0f0;
+    cursor: pointer;
+}
+.filter-control .name-filter button{
+    height: 40px;
+    width: 90%;
+    background-color: #4CAF50;
+    border: 1px solid #c0c0c0;
+    color: #f0f0f0;
+    cursor: pointer;
+    margin-top: 0.5%;
+}
+.filter-control .filter-byid button:active, .filter-control .name-filter button:active{
+    border: none;
+}
+
+.filter-control .name-filter .input-container{
+    display: flex;
+}
+
+.filter-control .name-filter input{
+    flex: 6;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Reserve.com</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(() => {
+                let loader = $('#loader');
+                let content = $('#content');
+
+                loader.hide();
+                content.hide();
+
+                $.getJSON('http://localhost:8080/api/reservations', (data) => {
+                    content.show();
+                    if(data && data.length > 0) {
+                        data.map((current, i) => {
+                            content.append(`<section>${current._id}</section>`);
+                            content.append(`<section>${current.name}</section>`);
+                            content.append(`<section>${current.hotelname}</section>`);
+                            content.append(`<section>${current.arrivaldate}</section>`);
+                            content.append(`<section>${current.departuredate}</section>`);
+                            content.append(`<hr/>`);
+                        })
+                    }
+                });
+
+                $('#submitButton').click((e) => {
+                    loader.show();
+                    let name = $('#name').val();
+                    let hotelName = $('#hotelname').val();
+                    let arrivalDate = $('#arrivalDate').val();
+                    let departureDate = $('#departureDate').val();
+                    $.post('http://localhost:8080/api/reservation', {name : name, hotelname: hotelName, arrivaldate: arrivalDate, departuredate:departureDate}, (data) => {
+                        loader.hide();
+                        //content.show().html(data);
+                    });
+                });
+
+                $('#searchByIdButton').click((e) => {
+                    let currentId = Number($('#idTextBox').val());
+                    let getByIdContainer = $('#getByIdResult');
+                    $.getJSON(`http://localhost:8080/api/reservation/${currentId}`, (current) => {
+                        getByIdContainer.html('');
+                        if(current) {
+                            getByIdContainer.append(`<section>${current._id}</section>`);
+                            getByIdContainer.append(`<section>${current.name}</section>`);
+                            getByIdContainer.append(`<section>${current.hotelname}</section>`);
+                            getByIdContainer.append(`<section>${current.arrivaldate}</section>`);
+                            getByIdContainer.append(`<section>${current.departuredate}</section>`);
+                            getByIdContainer.append(`<hr/>`);
+                        }
+                    });
+                });
+
+                $('#searchButton').click(() => {
+                    let hotelName = $('#searchTextBox').val();
+                    let arrivalDate = $('#searchInDate').val();
+                    let departureDate = $('#searchOutDate').val();
+                    let getByIdContainer = $('#searchResult');
+                    
+                    getByIdContainer.html('');
+                    $.getJSON(`http://localhost:8080/api/reservations?hotelName=${hotelName}&arrivalDate=${arrivalDate}&departureDate=${departureDate}`, (data) => {
+                        if(data && data.length > 0) {
+                            data.map((current, i) => {
+                                getByIdContainer.append(`<section>${current._id}</section>`);
+                                getByIdContainer.append(`<section>${current.name}</section>`);
+                                getByIdContainer.append(`<section>${current.hotelname}</section>`);
+                                getByIdContainer.append(`<section>${current.arrivaldate}</section>`);
+                                getByIdContainer.append(`<section>${current.departuredate}</section>`);
+                                getByIdContainer.append(`<hr/>`);
+                            });
+                        }
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to reservation system</h1>
+        </header>
+        <nav>
+            <a href='./add'>Add</a>
+        </nav>
+        <section class="main-container">
+            <input type="text" id='name' name='name' placeholder="Enter Guest Name" required/>
+            <input type="text" id='hotelname' name='hotelname' placeholder="Enter Hotel Name" required/>
+            <input type="date" id='arrivalDate' name='arrivaldate' required />
+            <input type="date" id='departureDate' name='departuredate' required />
+            <button type="button" id='submitButton' value="Submit">Submit</button>
+
+            <section id='loader'>
+                Loading...
+            </section>
+            <section id='content'>
+
+            </section>
+            <hr/>
+            <section>
+                <input type='text' id='idTextBox'/>
+                <button type="button" id='searchByIdButton' value="Search">Search</button>
+                <section id='getByIdResult'>
+                    
+                </section>
+            </section>
+            <hr/>
+            <section>
+                <input type='text' id='searchTextBox'/>
+                <input type='date' id='searchInDate'/>
+                <input type='date' id='searchOutDate'/>
+                <button type="button" id='searchButton' value="Search">Filter</button>
+                <section id='searchResult'>
+                    
+                </section>
+            </section>
+        </section>
+        <footer>
+            This is built by Vaishnav G. Thakur
+        </footer>
+    </body>
+</html>
