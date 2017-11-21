@@ -29,3 +29,7 @@ Step 2 : Run command : "npm install". This will ensure all the packages related 
 Step 3 : Run command : "npm start dev". This will start the application 
 
 Step 4 : Once the step 3 is completely executed the application will automatically open in browser with URL http://localhost:3000 . If it doesn't open automatically then manually type in the url and load the app. 
+
+
+Mongo DB:
+I have created Collections in my free mLab cloud hosted MongoDB using Azure. The connection url to it is in the app.js
