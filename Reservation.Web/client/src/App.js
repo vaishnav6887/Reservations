@@ -50,7 +50,7 @@ class App extends Component {
     });
   }
   refresh(data){
-    let filters = '/api/reservations';
+    let filters = '/api/reservation';
     if(data){
       if(data.hotelName) {
         filters = `${filters}?hotelName=${data.hotelName}`
