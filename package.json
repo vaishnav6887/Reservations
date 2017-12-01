@@ -28,7 +28,6 @@
     "request": "^2.83.0"
   },
   "devDependencies": {
-    "nodemon": "^1.12.1",
-    "prettier-eslint": "^8.2.2"
+    "nodemon": "^1.12.1"
   }
 }

@@ -39,10 +39,16 @@ I have created Collections in my free mLab cloud hosted MongoDB using Azure. The
 Installed Prettier :
 Following command in the root directory will make file formated. 
 
-Node Project: 
-prettier --print-width 80 --semi --single-quote --trailing-comma es5 --write --tab-width 3 */*.js *.js
+Node Project: (in '\Reservations' as a root folder)
+prettier --print-width 80 --semi --single-quote --trailing-comma es5 --write --tab-width 3 */*.js *.js 
 
-Web Project: 
-prettier --print-width 80 --semi --single-quote --trailing-comma es5 --write --tab-width 3 src/**/*.js
+Web Project: (in '\Reservations\Reservation.Web\client' as a root folder)
+prettier --print-width 80 --semi --single-quote --trailing-comma es5 --write --tab-width 3 src/**/*.js 
 
 **********************************************************************************************************************************************************
+
+Test CASES:
+
+To execute test cases open a seperate shell window and move to '\Reservations' and execute following command
+
+$> npm test
