@@ -40,9 +40,9 @@ Installed Prettier :
 Following command in the root directory will make file formated. 
 
 Node Project: 
-prettier --print-width 80 --semi --single-quote --trailing-comma es5 --write --tab-width 3 --arrow-parens always */*.js *.js
+prettier --print-width 80 --semi --single-quote --trailing-comma es5 --write --tab-width 3 */*.js *.js
 
 Web Project: 
-prettier --print-width 80 --semi --single-quote --trailing-comma es5 --write --tab-width 3 --arrow-parens always src/**/*.js
+prettier --print-width 80 --semi --single-quote --trailing-comma es5 --write --tab-width 3 src/**/*.js
 
 **********************************************************************************************************************************************************
