@@ -4,7 +4,7 @@
   "description": "Server side using NodeJS, expressJS and MongoDb to build API",
   "main": "app.js",
   "scripts": {
-    "test": "run",
+    "test": "mocha -- tests/*.js",
     "dev": "set NODE_ENV=dev && nodemon app.js"
   },
   "repository": {
@@ -22,8 +22,10 @@
   "homepage": "https://github.com/vaishnav6887/Reservations#readme",
   "dependencies": {
     "express": "^4.16.2",
+    "mocha": "^4.0.1",
     "mongodb": "^2.2.33",
-    "prettier": "^1.8.2"
+    "prettier": "^1.8.2",
+    "request": "^2.83.0"
   },
   "devDependencies": {
     "nodemon": "^1.12.1",

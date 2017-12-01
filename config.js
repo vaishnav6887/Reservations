@@ -3,11 +3,13 @@ var config = {
       database:
          'mongodb://reservationuser:admin123@ds042607.mlab.com:42607/reservations',
       port: 8080,
+      domain: 'http://localhost:8080/',
    },
    default: {
       database:
          'mongodb://reservationuser:admin123@ds042607.mlab.com:42607/reservations',
       port: 8080,
+      domain: 'http://localhost:8080/',
    },
 };
 

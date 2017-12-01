@@ -56,8 +56,16 @@ exports.getByReservationID = (req, res, db) => {
  */
 exports.createReservation = (req, res, db) => {
    let jsonObject = req.body;
-   if (!jsonObject || jsonObject.name === '' || jsonObject.hotelname === '') {
-      return res.status(500).json('There is an error!');
+   if (!jsonObject || !jsonObject.name || jsonObject.name.trim() === '') {
+      return res.status(500).json('Invalid Name!');
+   }
+
+   if (
+      !jsonObject ||
+      !jsonObject.hotelname ||
+      jsonObject.hotelname.trim() === ''
+   ) {
+      return res.status(500).json('Invalid Hotel Name!');
    }
 
    let formatedArrivalDate = new Date(jsonObject.arrivaldate);

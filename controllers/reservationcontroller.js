@@ -1,7 +1,7 @@
 const mongoClient = require('mongodb').MongoClient;
 
 const config = require('../config.js').get(String(process.env.NODE_ENV));
-var businessLogic = require('../businesslogic/reservationBO.js');
+var api = require('../api/reservationapi.js');
 var url = config.database;
 var db;
 
@@ -10,7 +10,7 @@ var db;
  * @return {object} Reservation object List.
  */
 exports.getAll = (req, res) => {
-   businessLogic.getAllReservations(req, res, db);
+   api.getAllReservations(req, res, db);
 };
 
 /**
@@ -19,7 +19,7 @@ exports.getAll = (req, res) => {
  * @return {object} Reservation object with given ID.
  */
 exports.getById = (req, res) => {
-   businessLogic.getByReservationID(req, res, db);
+   api.getByReservationID(req, res, db);
 };
 
 /**
@@ -31,7 +31,7 @@ exports.getById = (req, res) => {
  * @return {Number} ID of the New reservation
  */
 exports.create = (req, res) => {
-   businessLogic.createReservation(req, res, db);
+   api.createReservation(req, res, db);
 };
 
 mongoClient.connect(url, function(err, database) {
